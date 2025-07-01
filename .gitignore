@@ -1,0 +1,15 @@
+# Build files
+build/
+dist/
+
+# System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+var/
+__pycache__/
