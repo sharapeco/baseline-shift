@@ -27,8 +27,8 @@ def showDetailedHelp() -> None:
 	print('詳細:')
 	print('')
 	print('存在しないフィーチャーを追加してベースラインシフトを実現します。')
-	print('  Bs00–Bs99: 下方向に 0.5em まで 0.005em 単位でシフトする')
-	print('  BS00–BS99: 上方向に 0.5em まで 0.005em 単位でシフトする')
+	print('  bm00–99: 下方向に 0.5em まで 0.005em 単位でシフトする')
+	print('  bp00–99: 上方向に 0.5em まで 0.005em 単位でシフトする')
 	print('ここで 00 は 100 の意味です。')
 
 TableType = Union[G_P_O_S_.table_G_P_O_S_, G_S_U_B_.table_G_S_U_B_]
@@ -59,9 +59,9 @@ class BaselineModBuilder:
 
 		# フィーチャータグ
 		if index < 0:
-			tag = f'Bs{(-index % 100):02d}'
+			tag = f'bm{(-index % 100):02d}'
 		else:
-			tag = f'BS{(index % 100):02d}'
+			tag = f'bp{(index % 100):02d}'
 
 		# シフト量を決める
 		shiftAmount = int(index * 0.005 * self.upm)
